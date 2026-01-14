@@ -1,0 +1,66 @@
+[build-system]
+requires = ["uv_build>=0.9.22,<0.10.0"]
+build-backend = "uv_build"
+
+[project]
+name = "cc_project"
+version = "0.0.1"
+description = "for exercises on cookiecutter"
+authors = [
+  { name = "sebwae", email = "your@email.com" },
+]
+
+keywords = ["machine learning", "MLOps"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.115.6",
+    "hydra-core>=1.3.2",
+    "matplotlib>=3.10.8",
+    "torch==2.6.0",
+    "torchvision>=0.21.0",
+    "typer==0.15.1",
+    "uvicorn==0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "coverage==7.6.9",
+    "invoke==2.2.0",
+    "mkdocs-material==9.4.6",
+    "mkdocs==1.6.1",
+    "pre-commit==4.1.0",
+    "pytest==8.3.4",
+    "ruff>=0.6",
+    "mkdocstrings-python==1.12.2",
+    "mypy>=1.19.1",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu" },
+]
+torchvision = [
+    { index = "pytorch-cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "N", "I"]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[project.scripts]
+train = "cc_project.train:main"
