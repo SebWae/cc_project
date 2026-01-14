@@ -23,7 +23,7 @@ astroid @ file:///work/ci_py311/astroid_1676920975848/work
 astropy @ file:///croot/astropy_1697468907928/work
 asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
 async-lru @ file:///croot/async-lru_1699554519285/work
-asyncssh==2.17.0
+asyncssh==2.22.0
 atomicwrites==1.4.0
 atpublic==5.0
 attrs @ file:///croot/attrs_1695717823297/work
