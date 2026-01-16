@@ -1,6 +1,6 @@
 # cc_project
 
-for exercises on cookiecutter
+For exercises in the [02476 MLOps course](https://skaftenicki.github.io/dtu_mlops/) January 2026.
 
 ## Project structure
 
